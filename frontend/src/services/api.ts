@@ -1,6 +1,8 @@
 import type { ForecastHistoryRecord, OverviewResponse } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? '';
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ||
+  'https://ukwindforecastintelligence.onrender.com';
 
 export async function fetchOverview(date: string, cutoff: string): Promise<OverviewResponse> {
   const url = `${API_BASE_URL}/api/overview?date=${encodeURIComponent(date)}&cutoff=${encodeURIComponent(cutoff)}`;
