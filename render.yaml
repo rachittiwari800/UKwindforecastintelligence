@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: uk-wind-forecast-backend
+    runtime: docker
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: ELEXON_BASE_URL
+        value: https://data.elexon.co.uk/bmrs/api/v1
+      - key: DEFAULT_CUTOFF
+        value: "11:00"
+      - key: CACHE_TTL_SECONDS
+        value: "300"
+      - key: CORS_ORIGINS
+        value: http://localhost:5173,http://127.0.0.1:5173

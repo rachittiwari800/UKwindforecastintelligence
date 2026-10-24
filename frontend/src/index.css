@@ -1,0 +1,201 @@
+:root {
+  font-family: Inter, "Segoe UI", sans-serif;
+  color: #edf6ff;
+  background: #0b1220;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; min-height: 100%; }
+body {
+  background: linear-gradient(180deg, #090f1a 0%, #101b2b 100%);
+  color: #edf6ff;
+}
+
+button, input, select { font: inherit; }
+.app-shell {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+.eyebrow {
+  color: #72e6d4;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.4vw, 3rem);
+  line-height: 1.1;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.controls-inline {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #b6c7d8;
+  gap: 6px;
+}
+select, input[type="time"] {
+  background: rgba(14, 23, 35, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 8px;
+  color: #edf6ff;
+  padding: 9px 10px;
+}
+.primary-button, .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(114, 230, 212, 0.28);
+  padding: 10px 14px;
+  color: #edf6ff;
+  background: rgba(20, 36, 50, 0.9);
+  cursor: pointer;
+}
+.primary-button {
+  background: rgba(66, 215, 197, 0.15);
+}
+.meta-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+  color: #b3c4d5;
+  font-size: 12px;
+}
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+.kpi-card {
+  background: rgba(12, 19, 29, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 14px;
+  padding: 16px 18px;
+  min-height: 150px;
+}
+.kpi-card.accent { border-color: rgba(66, 215, 197, 0.45); }
+.kpi-card.accent-2 { border-color: rgba(242, 183, 91, 0.45); }
+.kpi-card.accent-3 { border-color: rgba(146, 168, 255, 0.45); }
+.kpi-label {
+  color: #a9bbc9;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.kpi-value {
+  margin-top: 18px;
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  font-weight: 700;
+}
+.kpi-muted {
+  margin-top: 12px;
+  color: #8ca5b6;
+  font-size: 12px;
+}
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+.panel {
+  background: rgba(12, 19, 29, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 14px;
+  padding: 18px;
+}
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #edf6ff;
+  margin-bottom: 12px;
+}
+.chart-wrap {
+  width: 100%;
+  height: 280px;
+}
+.chart-wrap.small { height: 220px; }
+.empty-state {
+  display: grid;
+  place-items: center;
+  height: 160px;
+  color: #9cb5c8;
+  background: rgba(14, 23, 35, 0.7);
+  border-radius: 8px;
+}
+.error-banner,
+.data-unavailable-banner {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.error-banner {
+  background: rgba(165, 75, 75, 0.2);
+  border: 1px solid rgba(255, 138, 138, 0.3);
+  color: #ffdfe7;
+}
+
+.data-unavailable-banner {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #f9d99b;
+}
+
+.quality-box {
+  color: #cfe3f2;
+}
+.quality-box ul { margin-top: 8px; }
+.table-panel { margin-top: 24px; }
+.table-wrap { overflow-x: auto; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ebf4ff;
+}
+th, td {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  padding: 10px 8px;
+  text-align: left;
+  font-size: 13px;
+}
+th { color: #a9bbc9; }
+.lower-grid { margin-top: 24px; }
+@media (max-width: 980px) {
+  .kpis { grid-template-columns: repeat(2, minmax(150px, 1fr)); }
+  .panel-grid { grid-template-columns: 1fr; }
+  .topbar { flex-direction: column; align-items: flex-start; }
+}
